@@ -1,0 +1,60 @@
+<h2>Input Users</h2>
+
+<form action="<?php echo URL; ?>/pelanggan/simpan" method="post">
+    <table>
+        <tr>
+            <td>GOLONGAN</td>
+            <td><select name="pel_id_gol" id="">
+            <?php foreach ($data['data_gol'] as $row) { ?>
+                <option value="<?php echo $row['gol_id']; ?>"><?php echo $row['gol_nama']; ?></option>
+            <?php } ?>
+            </select></td>
+        </tr>
+        <tr>
+            <td>USERS</td>
+            <td><select name="pel_id_user" id="">
+            <?php foreach ($data['data_users'] as $row) { ?>
+                <option value="<?php echo $row['user_id']; ?>"><?php echo $row['user_nama']; ?></option>
+            <?php } ?>
+            </select></td>
+        </tr>
+        <tr>
+            <td>ID PELANGGAN</td>
+            <td><input type="text" name="pel_no"></td>
+        </tr>
+        <tr>
+            <td>NAMA PELANGGAN</td>
+            <td><input type="text" name="pel_nama"></td>
+        </tr>
+        <tr>
+            <td>ALAMAT</td>
+            <td><input type="text" name="pel_alamat"></td>
+        </tr>
+        <tr>
+            <td>NO HP</td>
+            <td><input type="text" name="pel_hp"></td>
+        </tr>
+        <tr>
+            <td>NO KTP</td>
+            <td><input type="text" name="pel_ktp"></td>
+        </tr>
+        <tr>
+            <td>SERI PELANGGAN</td>
+            <td><input type="text" name="pel_seri"></td>
+        </tr>
+        <tr>
+            <td>NO METERAN</td>
+            <td><input type="text" name="pel_meteran"></td>
+        </tr>
+        <tr>
+            <td>PELANGGAN AKTIF</td>
+            <td>
+                <select name="pel_aktif" id=""><option value="Y">Y</option><option value="N">N</option></select>
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><input type="submit" name="btn_simpan" value="SIMPAN"></td>
+        </tr>
+    </table>
+</form>
